@@ -75,4 +75,4 @@ def number_spiral(positionX, positionY):
     # Retornamos el valor que está en las coordenadas indicadas, a estas se les resta 1 por que las lista empiezan en 0
     return spiral_matrix[positionY - 1][positionX - 1]
 
-assert number_spiral(2, 2) == 3, "Error, el resultado es distinto a lo esperado"
+assert number_spiral(2, 2) == 3, "Error en el caso de prueba"
