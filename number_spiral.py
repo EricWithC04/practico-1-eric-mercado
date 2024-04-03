@@ -1,7 +1,13 @@
 from math import sqrt, ceil
 
-def number_spiral(num):
+def number_spiral(positionX, positionY):
     spiral_matrix = []
+
+    if positionX > positionY:
+        num = positionX**2
+    else:
+        num = positionY**2
+
     num_col_rows = ceil(sqrt(num))
     
     for i in range(num_col_rows):
@@ -49,9 +55,6 @@ def number_spiral(num):
         elif decrement and not decrementX:
             lastY -= 1
     
-    
-    for i in spiral_matrix:
-        print(i)
-    return 0
+    return spiral_matrix[positionY - 1][positionX - 1]
 
-assert number_spiral(36) == 0, "Error, el resultado es distinto a lo esperado"
+assert number_spiral(2, 2) == 3, "Error, el resultado es distinto a lo esperado"
