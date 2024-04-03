@@ -1,14 +1,14 @@
-from math import sqrt, ceil
-
 def number_spiral(positionX, positionY):
     spiral_matrix = []
 
+    num_col_rows = 0
+
     if positionX > positionY:
         num = positionX**2
+        num_col_rows = positionX
     else:
         num = positionY**2
-
-    num_col_rows = ceil(sqrt(num))
+        num_col_rows = positionY
     
     for i in range(num_col_rows):
         spiral_matrix.append([])
