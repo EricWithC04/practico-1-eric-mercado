@@ -17,3 +17,5 @@ def missing_number(num, incomplete_list):
         return missing_numbers
 
 assert missing_number(5, [1, 2, 4, 5]) == 3, "Error en el caso de prueba"
+
+print("Todos los test pasaron correctamente")

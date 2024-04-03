@@ -20,3 +20,5 @@ def weird_algorithm(num):
             return list_complete
 
 assert weird_algorithm(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
+
+print("Todos los test pasaron correctamente")

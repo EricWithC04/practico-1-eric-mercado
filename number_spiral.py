@@ -76,3 +76,5 @@ def number_spiral(positionX, positionY):
     return spiral_matrix[positionY - 1][positionX - 1]
 
 assert number_spiral(2, 2) == 3, "Error en el caso de prueba"
+
+print("Todos los test pasaron correctamente")

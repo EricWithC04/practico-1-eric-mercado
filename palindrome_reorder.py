@@ -44,3 +44,5 @@ def palindrome_reorder(string):
         return palindrome_left + palindrome_center + palindrome_right
 
 assert palindrome_reorder("aabbc") == "abcba", "Error en el caso de prueba"
+
+print("Todos los test pasaron correctamente")
