@@ -34,20 +34,20 @@ def number_spiral(positionX, positionY):
                     decrementX = not decrementX
             else:
                 lastY -= 1
-        elif lastX == 0 and lastY == max_number and decrement:
+        elif (lastX == 0 or lastY == 0) and decrement:
+            if lastX < lastY:
+                lastY += 1
+            else:
+                lastX += 1
             decrement = False
             max_number += 1
-            lastY += 1
-        elif lastY == 0 and lastX == max_number and decrement:
-            decrement = False
-            max_number += 1
-            lastX += 1
-        elif lastX < lastY and lastY == max_number and not decrement:
-            lastX += 1
-        elif lastY < lastX and lastX == max_number and not decrement:
-            lastY += 1
-            if lastY == max_number:
-                decrementX = not decrementX
+        elif (lastX == max_number or lastY == max_number) and not decrement:
+            if lastX < lastY:
+                lastX += 1
+            else:
+                lastY += 1
+                if lastY == max_number:
+                    decrementX = not decrementX
         elif decrement and decrementX:
             lastX -= 1
             if lastX == 0:
