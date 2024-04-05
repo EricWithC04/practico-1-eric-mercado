@@ -1,4 +1,4 @@
-def number_spiral(positionX, positionY):
+def number_spiral(positionY, positionX):
     spiral_matrix = []
 
     num_col_rows = 0
